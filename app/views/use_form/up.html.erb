@@ -1,0 +1,19 @@
+<h1>UseForm#up</h1>
+<p>Find me in app/views/use_form/up.html.erb</p>
+
+<p>downの方にpostするよ</p>
+<%=form_tag use_form_down_path, method: "post" do%>
+  <%=text_field_tag :name %>
+  <%=submit_tag%>
+<%end%>
+#form_forはmodelと紐づけを行う<br/>
+#modelsフォルダにあるModel（ここではSample.rbが当たる）でpostの受け皿にはしてはいけない<br/>
+#ModlはDBとの受け皿用のため正確に受け取れない<br/>
+#中身が空だとエラーになる<br/>
+#urlの部分は上記の様に設定するか<br/>
+#:url =>{:controller => 'use_form', :action => 'down'}の様に設定する<br/>
+#routes.rbにはpostで設定する<br/>
+
+<br/>
+#通常のformタグを生成する場合はform_tagを使用する<br/>
+#この時|f|の様に設定してそのfからf.text_filedの様にform_forの様な使用方法はできない<br/>

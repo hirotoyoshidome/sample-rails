@@ -1,0 +1,7 @@
+<h1>UseForm#down</h1>
+<p>Find me in app/views/use_form/down.html.erb</p>
+<%unless(@val == nil)%>
+  <p>受け取った値は<%=@val%>です</p>
+<%end%>
+<br/>
+<%=link_to '戻る', use_form_up_path%>

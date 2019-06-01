@@ -1,0 +1,29 @@
+<h1>Sample#up</h1>
+<p>Find me in app/views/sample/up.html.erb</p>
+
+
+<%=link_to 'もどるよ', '/sample/down'%>
+<% sports = ['baseball', 'football'] %>
+<% sports.each do |sport| %>
+<p><%=sport %>です</p>
+<%end%>
+
+<%(1..3).each do |num|%>
+  <%if(num == 1)%>
+    1です
+  <%else%>
+      1ではないです
+  <%end%>
+<%end%>
+<br/> <!--nullではなくnil -->
+<%unless(@param == nil)%>
+<%=@param%>はクエリストリングで取得したよ
+<%end%>
+
+<!--カラム名で取得可能 -->
+<%@data.each do |d|%>
+  <%=d.name%>は名前です<br/>
+  <%=d.age%>は年齢です<br/>
+  <%=d.created_at%>は作成日です<br/>
+  <%=d.updated_at%>は更新日です<br/>
+<%end%>
